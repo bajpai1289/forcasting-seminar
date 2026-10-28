@@ -1,5 +1,6 @@
 .venv
 *.csv
+!submissions/*.csv
 /data
 /air_temp_data_example
 /wind_data_example
