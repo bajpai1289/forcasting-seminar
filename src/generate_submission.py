@@ -37,10 +37,10 @@ def load_weather(filename, value_column):
 
     # DWD timestamps are UTC; forecast timestamps are German local time.
     df["timestamp"] = (
-        df["timestamp"]
-        .dt.tz_convert("Europe/Berlin")
-        .dt.tz_localize(None)
-    )
+    df["timestamp"]
+    .dt.tz_convert("Europe/Berlin")
+    .dt.tz_localize(None)
+)
 
     df[value_column] = pd.to_numeric(
         df[value_column], errors="coerce"
